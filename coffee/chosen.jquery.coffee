@@ -328,7 +328,7 @@ class Chosen extends AbstractChosen
     this.results_reset_cleanup()
     @form_field_jq.trigger "change"
     this.results_hide() if @active_field
-  
+
   results_reset_cleanup: ->
     @selected_item.find("abbr").remove()
 
@@ -530,6 +530,12 @@ class Chosen extends AbstractChosen
         break
       when 40
         this.keydown_arrow()
+        break
+      when 33
+        (this.keyup_arrow() for iter in [1..5])
+        break
+      when 34
+        (this.keydown_arrow() for iter in [1..5])
         break
 
   search_field_scale: ->
