@@ -36,8 +36,8 @@ class AbstractChosen
     @max_selected_options = @options.max_selected_options || Infinity
 
   set_default_text: ->
-    if @form_field.getAttribute("data-placeholder")
-      @default_text = @form_field.getAttribute("data-placeholder")
+    if @form_field.getAttribute("data_placeholder")
+      @default_text = @form_field.getAttribute("data_placeholder")
     else if @is_multiple
       @default_text = @options.placeholder_text_multiple || @options.placeholder_text || "Select Some Options"
     else

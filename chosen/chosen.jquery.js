@@ -140,8 +140,8 @@ Copyright (c) 2011 by Harvest
     };
 
     AbstractChosen.prototype.set_default_text = function() {
-      if (this.form_field.getAttribute("data-placeholder")) {
-        this.default_text = this.form_field.getAttribute("data-placeholder");
+      if (this.form_field.getAttribute("data_placeholder")) {
+        this.default_text = this.form_field.getAttribute("data_placeholder");
       } else if (this.is_multiple) {
         this.default_text = this.options.placeholder_text_multiple || this.options.placeholder_text || "Select Some Options";
       } else {
